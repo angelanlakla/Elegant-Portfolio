@@ -18,8 +18,8 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname), // 当前目录就是 root
  build: {
-    // 强制将打包产物输出到 client 文件夹同级的 dist 文件夹中
-    outDir: path.resolve(import.meta.dirname, "../dist"), 
+    // 删掉之前的 path.resolve(...)，直接填 'dist'
+    outDir: 'dist', 
     emptyOutDir: true,
   }
 });
